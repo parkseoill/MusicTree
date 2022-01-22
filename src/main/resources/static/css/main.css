@@ -3,23 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
-
 html, body{
-	font-family: 'nanumsquare';
+	font-family: 'nanumSquare';
 }
 
 *{
 	box-sizing: border-box;
 }
-
 body{
 	min-width: 1280px;
 	width: 100%;
 	margin: 0 auto;
 }
 
-
-/* Top.jsp css */
 .topMenu{
 	width: 1280px;
 	text-align: right;
@@ -36,16 +32,21 @@ body{
 	cursor: pointer;
 }
 
+.topMenu div:last-child{
+	border: none;
+	padding-right: 0;
+}
+
 .Top{
 	width: 1280px;
 	margin: 0 auto;
 }
-
 .Top .logo img{
 	display: block;
 	margin: 24px auto 33px;
 	width: 174px;
 	height: 41px;
+	cursor: pointer;
 }
 
 .Top .searchBox{
@@ -99,13 +100,21 @@ body{
 	text-align: center;
 }
 
+.menu > ul > li:active{
+	border-bottom: 3px solid #29602b;
+}
+
 .menu > ul > li:hover{
 	border-bottom: 3px solid #29602b;
 }
 
+.menu > ul > li:hover > ul{
+	display: block;
+}
+
 .menu > ul > li span{
 	color: #29602b;
-	font-weight: 800;
+	font-weight: 800; 
 }
 
 .Mmenu{
@@ -135,22 +144,22 @@ body{
 
 .Mmenu li:hover{
 	color: #29602b;
-	font-weight: 800;
+	font-weight: 800; 
 }
 
-.rList{
+.rlist{
 	left: 319px;
-	height: 164px;
+	height: 164px;	
 }
 
-.gList{
+.glist{
 	left: 559px;
-	height: 313px;
+	height: 313px;	
 }
 
-.playList{
+.playlist{
 	left: 799px;
-	height: 122px;
+	height: 122px;	
 }
 
 
@@ -197,16 +206,14 @@ body{
 	width: 244px;
 	height: 56px;
 	margin-top: -60px;
-	background-image: url('../../static/img/MusicTree_logo_big@2x.png');
+	background-image: url('../../static/img/MusicTree_Logo_big@2x.png');
 	background-size: contain;
 }
 
 
 
 
-
-
-/* index.jsp css */
+/*index*/
 .content{
 	width: 1280px;
 	margin: 0 auto;
@@ -218,7 +225,7 @@ body{
 
 .content .C_title{
 	font-size: 24px;
-	font-weight: bold;
+	font-weight: blod;
 	color: #111111;
 	line-height: 0.9;
 }
@@ -226,7 +233,6 @@ body{
 .content .MusicBox .SlideBox{
 	width: 100%;
 	margin-top: 27px;
-	height: 340px;
 }
 
 .content .MusicBox .SlideBox .Music_item{
@@ -235,11 +241,13 @@ body{
 	width: 300px !important;
 	height: 300px;
 	margin: 0 10px;
+	cursor: pointer;
 }
 
 .content .MusicBox .SlideBox .Music_item img{
 	width: 300px;
 	height: 300px;
+	margin-top: 27px;
 }
 
 .content .MusicBox .SlideBox .Music_item .MusicInfo{
@@ -260,14 +268,15 @@ body{
 .content .MusicBox .SlideBox .Music_item .MusicInfo .Name{
 	font-size: 16px;
 	color: #bebebe;
+
 }
 
 .content .MusicBox .SlideBox .Music_item .MusicInfo .playBtn{
 	position: absolute;
+	right: 17px;
 	width: 20px;
 	height: 20px;
 	bottom: 14px;
-	right: 17px;
 	cursor: pointer;
 }
 
@@ -281,7 +290,7 @@ body{
 	opacity: 1;
 }
 
-.slick-dots li.slick-active{
+.slick-dots li.slick-active {
 	width: 26px;
 }
 
@@ -303,12 +312,12 @@ body{
 }
 
 .slick-next{
-	background-image: url('../../static/img/btn_right.png');
+	background-image: url('../../static/img/btn_right.png') !important;
 	right: -80px;
 }
 
 .slick-prev{
-	background-image: url('../../static/img/btn_left.png');
+	background-image: url('../../static/img/btn_left.png') !important;
 	left: -80px;
 }
 
@@ -460,7 +469,7 @@ body{
 .content .bottomMenu{
 	font-family: 'Noto Sans KR';
 	border-top: 1px solid #eeeeee;
-	padding-top:32px;
+	padding-top: 32px;
 	margin-bottom: 40px;
 	display: flex;
 	justify-content: space-between;
@@ -519,4 +528,176 @@ body{
 	color: #707070;
 	margin-bottom: 4px;
 	line-height: 1.5;
+}
+
+
+
+
+
+
+/* musicChart css */
+.Mcontent {
+	width: 1280px;
+	margin: 0 auto;
+	padding: 40px 0 150px;
+}
+
+.Mcontent .title{
+	font-size:24px;
+	color: #111111;
+	line-height: 0.9;
+	font-weight: bold;
+}
+
+.Mcontent .date{
+	text-align: center;
+	font-size: 20px;
+}
+
+.Mcontent .date span{
+	color: #29602b;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.Mcontent .btns{
+	text-align: right;
+	margin-top: 10px;
+}
+
+.Mcontent .btns img{
+	height: 30px;
+	cursor: pointer;
+}
+
+.Mcontent .musicChart{
+	margin-top: 20px;
+}
+
+.Mcontent .musicChart .chartTop{
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	padding: 15px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 15fr 1fr 1fr;
+}
+
+.Mcontent .musicChart .chartTop div{
+	font-size: 16px;
+	text-align: center;
+	color: #000000;
+}
+.Mcontent .musicChart .chartList{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.Mcontent .musicChart .chartList .listItem{
+	padding: 10px 0;
+	display: table-row;
+	height: 80px;
+}
+
+.Mcontent .musicChart .chartList .listItem div{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 67px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.Mcontent .musicChart .chartList .listItem .rank{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.Mcontent .musicChart .chartList .listItem .musicCover{
+	width: 60px;
+	height: 60px;
+}
+
+.Mcontent .musicChart .chartList .listItem .title{
+	font-size: 16px;	
+	width: 350px;
+	text-align: left;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding-right: 10px;
+}
+
+.Mcontent .musicChart .chartList .listItem .singer{
+	font-size: 16px;
+	color: #929292;
+	width: 500px;
+	text-align: left;
+}
+
+.Mcontent .musicChart .chartList .listItem .playBtn, .Mcontent .musicChart .chartList .listItem .addBtn{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.Mcontent .loading{
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 50px auto;
+}
+
+.Mcontent .position{
+	color: #848484;
+	font-size: 14px;
+	margin-bottom: 50px;
+}
+
+.Mcontent .albumChart{
+	margin-top: 100px;
+}
+
+.Mcontent .albumChart .chartList .listItem{
+	width: 600px;
+	height: 160px;
+	border: 1px solid #eeeeee;
+	display: inline-block;
+	margin: 0 70px 20px 0;
+}
+
+.Mcontent .albumChart .chartList .listItem:nth-child(2n - 1){
+	margin-right: 0;
+}
+
+.Mcontent .albumChart .chartList .listItem .albumImg{
+	width: 160px;
+	height: 160px;
+	float: left;
+	margin-right: 21px;
+}
+
+.Mcontent .albumChart .chartList .listItem .albumImg img{
+	width: 160px;
+	height: 160px;
+}
+
+.Mcontent .albumChart .chartList .listItem .albumInfo{
+	float: left;
+	padding-top: 22px;
+}
+
+.Mcontent .albumChart .chartList .listItem .albumInfo .musicTitle{
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+
+.Mcontent .albumChart .chartList .listItem .albumInfo .singer{
+	font-size: 14px;
+	color: #929292;
+	margin-bottom: 30px;
+}
+
+.Mcontent .albumChart .chartList .listItem .albumInfo .playBtn{
+	width: 20px;
+	height: 20px;
 }
