@@ -58,8 +58,8 @@
 						<img src="${path}/static/img/arrow_right@2x.png"/>
 					</div>
 				</div>
-				<div class="chartList">
-					
+				<div class="chartList">		
+							
 				</div>
 			</div>
 		</div>
